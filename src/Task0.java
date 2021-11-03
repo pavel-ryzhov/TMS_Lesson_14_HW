@@ -32,7 +32,7 @@ public class Task0 {
         long count = list.stream().count();
         System.out.println(count);                                  // - Вывести количество элементов в стриме
 
-        int sum = list.stream().reduce((acc, e) -> acc += e).get();
+        int sum = list.stream().reduce(Integer::sum).get();
         System.out.println(sum / count);                            // - Вывести среднее арифметическое всех чисел в стриме
     }
 }
